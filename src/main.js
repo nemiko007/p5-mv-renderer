@@ -1,4 +1,3 @@
-import p5 from 'p5';
 import './style.css';
 
 const appContainer = document.getElementById('app');

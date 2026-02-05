@@ -5,10 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>p5.js MV Renderer</title>
-    <!-- p5.sound.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.1/lib/addons/p5.sound.min.js"></script>
-    <!-- CCapture.js CDN -->
-    <script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
     <style>
       body {
         margin: 0;
@@ -61,6 +57,16 @@
         </div>
       </div>
     </div>
+
+    <!-- ライブラリの読み込み順を修正 -->
+    <!-- p5.js 本体を先に -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.min.js"></script>
+    <!-- 次に p5.sound.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
+    <!-- CCapture.js -->
+    <script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
+    
+    <!-- 最後にメインのスクリプトを実行 -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
